@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  --white: #fff;
+  --theme: rgb(255, 96, 26);
+}
+
+body {
+  font-family: "源柔ゴシック" ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-feature-settings: "palt";
+  width: 100dvw;
+  padding: 30px 0;
+}
+
+:where(body>*) {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: max(10vw, 60px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2 {
+  font-size: max(5vw, 30px);
+  font-weight: 900;
+}
+
+p {
+  width: clamp(600px, 50vw, 200px);
+  font-size: 20px;
+}
+
+#screenshots {
+  display: flex;
+  width: 100dvw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+#screenshots img {
+  width: 300px;
+  border-radius: 10px;
+}
