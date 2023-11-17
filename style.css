@@ -3,8 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
-  --white: #fff;
-  --theme: rgb(255, 96, 26);
+  --white: #f4f5f7;
+  --black: #1f2937;
+  --theme1: #ff9f00;
+  --theme2: #ff5100;
 }
 
 body {
@@ -13,43 +15,94 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
   font-feature-settings: "palt";
   width: 100dvw;
-  padding: 30px 0;
+  padding: 20px 0;
+  background-color: var(--white);
+  color: var(--black);
 }
 
-:where(body>*) {
-  margin-bottom: 30px;
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+}
+
+.box div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box div:nth-of-type(0)>* {
+  margin-bottom: 10px;
+}
+
+hr {
+  border: solid 1px;
+  border-image: linear-gradient(90deg, var(--theme1), var(--theme2)) 1;
+  width: 80%;
+}
+
+@media screen and (max-width: 800px) {
+  .box {
+    flex-direction: column;
+  }
+
+  .box div {
+    width: 100%;
+  }
 }
 
 h1 {
-  font-size: max(10vw, 60px);
   font-weight: 900;
-  line-height: 1;
+  font-size: 70px;
+  text-shadow: var(--black) 0px 0px 4px;
 }
 
 h2 {
-  font-size: max(5vw, 30px);
-  font-weight: 900;
+  font-weight: 700;
+  font-size: 50px;
+  text-shadow: var(--black) 0px 0px 2px;
 }
 
 p {
-  width: clamp(600px, 50vw, 200px);
+  max-width: 450px;
   font-size: 20px;
 }
 
-#screenshots {
-  display: flex;
-  width: 100dvw;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 10px;
+.screenshots {
+  max-height: 60vh;
+  border-radius: 10px;
 }
 
-#screenshots img {
-  width: 300px;
+.buttons {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(45deg, var(--theme1), var(--theme2));
+  filter: drop-shadow(0px 0px 3px var(--theme1));
+  transition: filter 0.2s ease-in-out;
   border-radius: 10px;
+  padding: 10px 20px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.buttons:hover {
+  filter: drop-shadow(0px 0px 5px var(--theme1));
+}
+
+.buttons:active {
+  filter: drop-shadow(0px 0px 10px var(--theme1));
+}
+
+::selection {
+  background-color: var(--theme1);
+  text-shadow: var(--white) 0px 0px 3px;
+  color: var(--white);
 }
