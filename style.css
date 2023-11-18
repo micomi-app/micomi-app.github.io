@@ -10,15 +10,13 @@
 }
 
 body {
-  font-family: "源柔ゴシック" ;
+  font-family: "源柔ゴシック";
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
   font-feature-settings: "palt";
   width: 100dvw;
-  padding: 20px 0;
   background-color: var(--white);
   color: var(--black);
 }
@@ -27,9 +25,10 @@ body {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 40px;
   width: 80%;
+  height: 100dvh;
 }
 
 .box div {
@@ -37,26 +36,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.box div:nth-of-type(0)>* {
+.box div:nth-of-type(1)>* {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .box {
+    flex-direction: column;
+  }
+
+  .box div {
+    width: 100% !important;
+  }
 }
 
 hr {
   border: solid 1px;
   border-image: linear-gradient(90deg, var(--theme1), var(--theme2)) 1;
   width: 80%;
-}
-
-@media screen and (max-width: 800px) {
-  .box {
-    flex-direction: column;
-  }
-
-  .box div {
-    width: 100%;
-  }
 }
 
 h1 {
@@ -72,8 +72,12 @@ h2 {
 }
 
 p {
-  max-width: 450px;
+  max-width: 90%;
   font-size: 20px;
+}
+
+.screenshots-wrapper {
+  height: 60vh;
 }
 
 .screenshots {

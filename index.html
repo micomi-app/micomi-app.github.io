@@ -4,40 +4,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="locomotive-scroll.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="locomotive-scroll.min.js"></script>
+  <script src="script.js"></script>
   <title>MicoMi - The Ultimate Effortless ToDo App.</title>
 </head>
 
-<body>
-  <div class="box">
-    <div>
-      <h1 style="margin: 0;">MicoMi</h1>
-      <p>The Ultimate Effortless ToDo App.<br>
+<body data-scroll-container>
+  <div class="box" data-scroll-section>
+    <div data-scroll data-scroll-speed="3">
+      <h1 data-scroll style="margin: 0;">MicoMi</h1>
+      <p data-scroll>The Ultimate Effortless ToDo App.<br>
         MicoMiは、コツコツ進めたい学生を支援するToDoアプリです。</p>
     </div>
-    <div>
-      <img class="screenshots" src="screenshot0.png" alt="スクリーンショット">
+    <div data-scroll  style="position: relative;" class="screenshots-wrapper">
+      <img data-scroll class="screenshots" src="screenshot1.png" alt="スクリーンショット" style="position: absolute; transform: translate(-70px, -10px);">
+      <img data-scroll class="screenshots" src="screenshot0.png" alt="スクリーンショット" style="position: absolute; transform: translate(70px, 10px);">
     </div>
   </div>
-  <hr>
-  <div class="box">
-    <div>
-      <h2>超高速で計画を作成</h2>
-      <p>コツコツ進めるには、予定表が必要です。しかし、予定表の作成には時間がかかり、頓挫した場合に立て直す手間もあります。<br>
-      このアプリでは、アルゴリズムにより「ToDo」と「大変度」から自動的に予定表を生成します。</p>
-    </div>
-    <div>
-      <img class="screenshots" src="screenshot1.png" alt="スクリーンショット">
+  <div data-scroll  class="box" data-scroll-section>
+    <div data-scroll style="width: 80%">
+      <h2 data-scroll>超高速で計画を作成</h2>
+      <p data-scroll>コツコツ進めるには、予定表が必要です。このアプリでは、アルゴリズムにより「ToDo」と「大変度」から自動的に予定表を生成します。</p>
+      <p data-scroll>計画をより素早く立て、すぐに勉強に取り掛かることができます。また、万が一計画が頓挫してしまっても即座に計画を作り直すことができます。</p>
     </div>
   </div>
-  <hr>
-  <div class="box">
-    <div>
-      <h2>使ってみる</h2>
-      <p>Androidにて野良アプリとして配布しています。</p>
+  <div data-scroll  class="box" data-scroll-section>
+    <div data-scroll >
+      <h2 data-scroll>使ってみる</h2>
+      <p data-scroll>Androidにて野良アプリとして配布しています。</p>
     </div>
-    <div>
-      <a href="#" download="micomi.apk" class="buttons">MicoMiをダウンロード</a>
+    <div data-scroll >
+      <a data-scroll href="#" download="micomi.apk" class="buttons">MicoMiをダウンロード</a>
     </div>
   </div>
 </body>
