@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "源柔ゴシック";
+  font-family: "GenJyuuGothicP";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,6 +83,7 @@ p {
 .screenshots {
   max-height: 60vh;
   border-radius: 10px;
+  filter: drop-shadow(0px 10px 5px var(--white));
 }
 
 .buttons {
