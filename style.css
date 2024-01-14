@@ -76,6 +76,10 @@ p {
   font-size: 20px;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .screenshots-wrapper {
   height: 60vh;
 }
